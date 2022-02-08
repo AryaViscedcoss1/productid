@@ -7,20 +7,29 @@
 <body>
   <div class="center">
     <label class="inputtext">Product id:</label>
-    <input type="number" id="id"><br><br>
+    <input type="number" id="id" min="100"><br><br>
     <label class="inputtext">Product Name:</label>
     <input type="string" id="Name" min="0"><br><br>
     <label class="inputtext">Product Price:</label>
     <input  id="Price" min="0"><br><br>
     <button class="button" id="ADD">ADD PRODUCT</button>
   </div>
-  <div class="listTitle">
-    <h3>Product Id</h3><h3>Product Name</h3><h3>Product Price</h3>
+  <div class="row">
+    <div class="column">
+      <h2 >Product id</h2>
+      <p id="displayId" class="p"></p>
+    </div>
+    <div class="column">
+      <h2 >Product Name</h2>
+      <p id="displayName" class="p" ></p>
+    </div>
+    <div class="column" >
+      <h2 >Product Price</h2>
+      <p id="displayPrice" class="p" ></p>
+    </div>
   </div>
-  <div id="list" class="listTitle">
-
-      </div>
-  </body>
+  
+</body>
 </html>
 <script src="script.js">
 

@@ -1,26 +1,26 @@
 // variable intialization
 var add=document.getElementById("ADD");
-var d=document.getElementById("list");
+var dId=document.getElementById("displayId");
+var dName=document.getElementById("displayName");
+var dPrice=document.getElementById("displayPrice");
+
+var data=[];
 
 // logic!!
-function myFunction(n,a,w)
-{
 
 
-    let ob=document.createElement("div")
-    let idDisplay = document.createElement("h5");
-    let nameDisplay = document.createElement("h5");
-    let priceDisplay = document.createElement("h5");
+function display()
+{    
+    dId.innerHTML="";
+    dName.innerHTML="";
+    dPrice.innerHTML="";
+    console.log(data)
+    data.forEach(function myFunc(value,index,array){
+          dId.innerHTML+='<br>'+array[index].id;
+          dName.innerHTML+='<br>'+array[index].name;
+          dPrice.innerHTML+='<br>'+array[index].price;
 
-    idDisplay.innerHTML = n;
-    nameDisplay.innerHTML = a;
-    priceDisplay.innerHTML = w;
-
-    ob.appendChild(idDisplay);
-    ob.appendChild(nameDisplay);
-    ob.appendChild(priceDisplay);
-
-    d.appendChild(ob);
+    });
 }
 
 
@@ -39,6 +39,7 @@ function myFunction(n,a,w)
   // value to send for process
   console.log("values to be sended for processing");
   console.log(id,Name,Price);
-  myFunction(id,Name,Price);
+  data.push({'id':id,'name':Name,'price':Price});
+  display();
  });
 
