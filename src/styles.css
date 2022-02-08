@@ -26,7 +26,7 @@
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
+  width: 25%;
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
@@ -52,4 +52,14 @@ h2
 body
 {
   padding: 5%;
+}
+.button {
+  background-color: #979b97; /* Green */
+  border: none;
+  color: rgb(12, 12, 12);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
 }
